@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Iguatemi 50+ - Let's Code</title>
+  
+  <link href="style.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+  <ul class="topnav">
+    <a href="index.html">Listar</a>
+    <a class="active" href="formulario.html">Cadastrar</a>
+  </ul>
+
+  <div id="root">
+    <form id="myForm">
+        <label>Nome:</label>
+        <input id="nome" name="nome">
+
+        <label>Data de Nascimento:</label>
+        <!--<input id="data_nascimento" name="data_nascimento">-->
+        <input id="data_nascimento" type="date" name="data_nascimento">
+
+        <label>Sexo:</label>
+        <select id="sexo" name="sexo">
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+        </select>
+
+        <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <script src="post.js"></script>
+</body>
+
+</html>

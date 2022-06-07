@@ -55,6 +55,10 @@
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
     transform: translate3D(0, -2px, 0);
   }
+
+  .card p a:hover {
+      cursor: pointer;
+  }
   
   /* Add a black background color to the top navigation */
   .topnav {
@@ -83,3 +87,4 @@
     background-color: #f8dd32;
     color: black;
   }
+

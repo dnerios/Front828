@@ -28,7 +28,8 @@ request.onload = function() {
             p.innerHTML = `<b>Código:</b> ${cliente.codigo} <br>
             <b>Data de Nascimento:</b> ${cliente.data_nascimento} <br/>
             <b>Sexo:</b> ${cliente.sexo == 'M' ? 'Masculino' : 'Feminino'} <br/>
-            <b>Visitas:</b> ${cliente.quantidade_visitas} <br>`;
+            <b>Visitas:</b> ${cliente.quantidade_visitas} <br>
+            <a onclick="javascript: apagar(${cliente.codigo});" >Excluir</a>`;
 
             container.appendChild(card);
             card.appendChild(h1);
@@ -43,3 +44,12 @@ request.onload = function() {
 };
 
 request.send();
+
+function apagar(codigo) {
+    var request = new XMLHttpRequest();
+    request.open('DELETE', 'http://localhost:8080/v1/clientes?codigo=' + codigo, true);
+
+    request.send();
+
+    location.reload();
+}
